@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import { Progress } from 'react-sweet-progress';
 import 'react-sweet-progress/lib/style.css';
-
 class App extends Component {
   constructor() {
     super();
@@ -27,7 +26,9 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Example stress bar prototype, you can adjust the value and the bar
+            changes in real time. I can get it set up where your mods can alter
+            the value through the bot if given a little time.
           </p>
 
           <Progress
@@ -41,7 +42,6 @@ class App extends Component {
               onChange={this.handleChange}
             />
           </form>
-          <p>here is an example of a progress bar that could be altered</p>
         </header>
       </div>
     );
