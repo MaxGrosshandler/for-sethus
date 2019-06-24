@@ -13,6 +13,7 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
+    console.log('hello! ' + process.env.PERCENTAGE);
     event.preventDefault();
     console.log(event.currentTarget);
     this.setState({
@@ -29,7 +30,10 @@ class App extends Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
 
-          <Progress percent={this.state.percentage} status="success" />
+          <Progress
+            percent={process.env.PERCENTAGE || this.state.percentage}
+            status="success"
+          />
           <form>
             <input
               type="number"
